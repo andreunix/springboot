@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  db: # Banco de dados
+    image: postgres  
+    restart: always
+    container_name: crud-spring-boot
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: spring-db
+    ports:
+      - "5432:5432"
